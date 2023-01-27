@@ -1,7 +1,6 @@
 package ru.practicum.emojicon.engine;
 
 import com.googlecode.lanterna.TextCharacter;
-import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.screen.Screen;
 import com.vdurmont.emoji.Emoji;
 
@@ -63,5 +62,8 @@ public class RootFrame extends AbstractFrame {
 
     public void setTransparentColorFn(BiFunction<Integer, Integer, TextColor> transparentColorFn) {
         this.transparentColorFn = transparentColorFn;
+    }
+    public Screen getScreen() {
+        return screen;
     }
 }
