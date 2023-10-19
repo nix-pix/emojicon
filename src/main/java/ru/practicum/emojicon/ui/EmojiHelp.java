@@ -18,8 +18,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class EmojiHelp implements Drawable {
-
-
     private final Engine engine;
     private final EmojiWorld world;
 

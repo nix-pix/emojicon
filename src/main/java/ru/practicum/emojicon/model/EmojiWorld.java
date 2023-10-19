@@ -10,18 +10,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class EmojiWorld extends EmojiObject implements EntityResolver, EmojiObjectHolder, Controller {
-
     private final Logger log = LoggerFactory.getLogger(getClass());
-
     private final List<EmojiWorldObject> objects = new ArrayList<>();
     private UUID selection = null;
     private EmojiWorldLandscape landscape;
 
-    public EmojiWorld(){
+    public EmojiWorld() {
         this.initEarth(2048, 2048);
         log.info("world created");
     }
-
 
     private void initEarth(int width, int height) {
         this.setWidth(width);
@@ -51,7 +48,7 @@ public class EmojiWorld extends EmojiObject implements EntityResolver, EmojiObje
     }
 
     private void drawEarth(Frame frame) {
-        for(int x = Math.max(0, frame.getLeft()); x <= Math.min(getWidth(), frame.getRight()); x++){
+        for (int x = Math.max(0, frame.getLeft()); x <= Math.min(getWidth(), frame.getRight()); x++) {
             for (int y = Math.max(0, frame.getTop()); y <= Math.min(getHeight(), frame.getBottom()); y++) {
                 frame.setPosition(x, y);
                 int depth = landscape.getDepth(x, y);
@@ -81,13 +78,13 @@ public class EmojiWorld extends EmojiObject implements EntityResolver, EmojiObje
     @Override
     public void handleKey(KeyStroke key) {
         objects.stream().filter(obj -> obj.getId().equals(selection)).filter(obj -> obj instanceof Controllable).map(obj -> (Controllable) obj).forEach(obj -> {
-            switch (key.getKeyType()){
+            switch (key.getKeyType()) {
                 case ArrowDown:
                 case ArrowLeft:
                 case ArrowUp:
                 case ArrowRight:
                     Point pt = null;
-                    switch (key.getKeyType()){
+                    switch (key.getKeyType()) {
                         case ArrowDown:
                             pt = new Point(0, 1);
                             break;
@@ -107,7 +104,7 @@ public class EmojiWorld extends EmojiObject implements EntityResolver, EmojiObje
                     break;
                 default:
 
-                }
+            }
         });
     }
 

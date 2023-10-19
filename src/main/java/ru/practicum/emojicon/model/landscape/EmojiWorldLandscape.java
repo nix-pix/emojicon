@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmojiWorldLandscape {
-
     private final int width;
     private final int height;
     private final List<List<Integer>> depthMatrix;
@@ -57,7 +56,6 @@ public class EmojiWorldLandscape {
         List<Integer> col = x < depthMatrix.size() ? depthMatrix.get(x) : null;
         return col != null && y < col.size() ? col.get(y) : 0;
     }
-
 
     public boolean isWater(Point pt) {
         return isWaterDeep(getDepth(pt.getX(), pt.getY()));
