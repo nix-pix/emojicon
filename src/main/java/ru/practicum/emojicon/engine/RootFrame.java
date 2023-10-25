@@ -9,7 +9,6 @@ import java.util.function.BiFunction;
 
 //корневой фрейм работает с устройством, всегда рисует от 0 до края консоли
 public class RootFrame extends AbstractFrame {
-
     Screen screen;
     private BiFunction<Integer, Integer, TextColor> transparentColorFn;
 

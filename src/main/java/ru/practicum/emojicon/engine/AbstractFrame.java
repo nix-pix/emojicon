@@ -7,7 +7,6 @@ public abstract class AbstractFrame implements Frame {
     private final int top;
     private final int right;
     private final int bottom;
-
     private int posX;
     private int posY;
     private TextColor fillColor;
@@ -68,12 +67,12 @@ public abstract class AbstractFrame implements Frame {
     }
 
     //set background color
-    public void setFillColor(TextColor fillColor){
+    public void setFillColor(TextColor fillColor) {
         this.fillColor = fillColor;
     }
 
     //set paint color
-    public void setColor(TextColor color){
+    public void setColor(TextColor color) {
         this.color = color;
     }
 }

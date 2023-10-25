@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Area implements Boxed {
-
     private final int left;
     private final int right;
     private final int top;

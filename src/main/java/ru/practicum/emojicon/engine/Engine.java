@@ -17,14 +17,11 @@ import java.util.Optional;
 import java.util.UUID;
 
 public class Engine implements Runnable, EntityResolver {
-
-    //время одного кадра при частоте в 60 FPS
-    private static final Long FRAME_TIME = 1000L / 60;
+    private static final Long FRAME_TIME = 1000L / 60; //время одного кадра при частоте в 60 FPS
     private final Terminal terminal;
     private final Screen screen;
     private final List<Drawable> roots = new ArrayList<>();
     private final Camera camera;
-
     private Instant timestamp;
 
     public Engine() {

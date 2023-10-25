@@ -9,9 +9,7 @@ public interface Controller {
 
     void handleKey(KeyStroke key);
 
-    void setSelection(UUID ...objectId);
+    void setSelection(UUID... objectId);
 
     List<UUID> getSelection();
-
-
 }
